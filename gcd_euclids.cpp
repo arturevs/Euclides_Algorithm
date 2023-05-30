@@ -13,10 +13,10 @@ unsigned int gdc_linear(unsigned int a,unsigned int b)
     return 1;
 }
 
-unsigned int gdc_euclides(unsigned int a,unsigned int b)
+unsigned int gdc_euclids(unsigned int a,unsigned int b)
 {
     if(b == 0) return a;
-    else return gdc_euclides(b, a % b);
+    else return gdc_euclids(b, a % b);
 }
 
 int main()
@@ -30,7 +30,7 @@ int main()
     std::cin >> b;
     // start counting time in microseconds
     std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
-    std::cout << "the gdc from " << a << " and " << b << " is " << gdc_euclides(a, b) << '\n';
+    std::cout << "the gdc from " << a << " and " << b << " is " << gdc_euclids(a, b) << '\n';
     // int variable ending count of time
     std::chrono::high_resolution_clock::time_point stop = std::chrono::high_resolution_clock::now();
     // calculate time difference
