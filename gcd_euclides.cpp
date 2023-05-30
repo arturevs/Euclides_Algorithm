@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 
-unsigned int mdc_linear(unsigned int a,unsigned int b)
+unsigned int gdc_linear(unsigned int a,unsigned int b)
 {
     int i = a;
     if(a < b) int i = b;
@@ -13,33 +13,33 @@ unsigned int mdc_linear(unsigned int a,unsigned int b)
     return 1;
 }
 
-unsigned int mdc_euclides(unsigned int a,unsigned int b)
+unsigned int gdc_euclides(unsigned int a,unsigned int b)
 {
     if(b == 0) return a;
-    else return mdc_euclides(b, a % b);
+    else return gdc_euclides(b, a % b);
 }
 
 int main()
 {
     unsigned int a, b;
     std::cout << 
-    "esse programa calculará o mdc de dois inteiros positivos a partir da implementação do algoritmo de euclides" << '\n';
-    std::cout << "insira o primeiro número: ";
+    "This program will return the greatest common divisor between two integers." << '\n';
+    std::cout << "input the first number: ";
     std::cin >> a;
-    std::cout << "insira o segundo número: ";
+    std::cout << "input the second number: ";
     std::cin >> b;
     // start counting time in microseconds
     std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
-    std::cout << "o mdc de " << a << " e " << b << " é " << mdc_euclides(a, b) << '\n';
+    std::cout << "the gdc from " << a << " and " << b << " is " << gdc_euclides(a, b) << '\n';
     // int variable ending count of time
     std::chrono::high_resolution_clock::time_point stop = std::chrono::high_resolution_clock::now();
     // calculate time difference
     auto duration = stop - start;
     // print time difference
-    std::cout << "Tempo de compilação do algoritmo de Euclides: " << duration.count() << " nanosegundos" << '\n';
+    std::cout << "Compilation time: " << duration.count() << " nanoseconds" << '\n';
     start = std::chrono::high_resolution_clock::now();
-    std::cout << "o mdc de " << a << " e " << b << " é " << mdc_linear(a, b) << '\n';
+    std::cout << "the gdc from " << a << " and " << b << " is " << gdc_linear(a, b) << '\n';
     stop = std::chrono::high_resolution_clock::now();
     duration = stop - start;
-    std::cout << "Tempo de compilação do algoritmo linear: " << duration.count() << " nanosegundos" << '\n';    
+    std::cout << "Compilation time: " << duration.count() << " nanoseconds" << '\n';    
 }
