@@ -10,7 +10,7 @@ In this project, the Euclid's Algorithm was implemented in C++. The code calcula
 
 ## Compiling in Linux Debian
 
-You will need g++ installed, with g++ and inside the project's main folder use the command sequence:
+You will need g++ installed, with g++ and inside the project's source folder use the command sequence:
 
 |                                    |
 |:----------------------------------:|
