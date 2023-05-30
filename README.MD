@@ -8,4 +8,12 @@ The Euclid's Algorithm is a method for finding the greatest common divisor (GCD)
 
 In this project, the Euclid's Algorithm was implemented in C++. The code calculates the GCD of two numbers and compares its efficiency to a linear function that also calculates the GCD.
 
+## Compiling in Linux Debian
 
+You will need g++ installed, with g++ and inside the project's main folder use the command sequence:
+
+|                                    |
+|:----------------------------------:|
+|   g++ gcd_euclids.cpp -o gcd.exe   |
+|   ./gcd.exe                        |
+|                                    |
