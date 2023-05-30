@@ -36,10 +36,10 @@ int main()
     // calculate time difference
     auto duration = stop - start;
     // print time difference
-    std::cout << "Compilation time: " << duration.count() << " nanoseconds" << '\n';
+    std::cout << "Compilation time for Euclids: " << duration.count() << " nanoseconds" << '\n';
     start = std::chrono::high_resolution_clock::now();
     std::cout << "the gdc from " << a << " and " << b << " is " << gdc_linear(a, b) << '\n';
     stop = std::chrono::high_resolution_clock::now();
     duration = stop - start;
-    std::cout << "Compilation time: " << duration.count() << " nanoseconds" << '\n';    
+    std::cout << "Compilation time for Linear: " << duration.count() << " nanoseconds" << '\n';    
 }
